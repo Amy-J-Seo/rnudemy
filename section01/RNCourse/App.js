@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { StyleSheet, Text, View, Button, TextInput } from "react-native";
+import Ionicons from "@expo/vector-icons/Ionicons";
 
 export default function App() {
   const [enteredGoalText, setEnteredGoalText] = useState("");
@@ -23,6 +24,7 @@ export default function App() {
           placeholder="Your course goal!"
           onChangeText={goalInputHandler}
         />
+        <Ionicons name="md-checkmark-circle" size={32} color="green" />
         <Button title="Add Goal" onPress={addGoalHandler} />
       </View>
       <View style={styles.goalsContainer}>
