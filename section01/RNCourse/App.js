@@ -23,6 +23,9 @@ export default function App() {
       return currentCourseGoals.filter((item) => item.id !== id);
     });
   }
+  function closeModalHandler(visible) {
+    setIsModalVisible(!visible);
+  }
   return (
     <View style={styles.appContainer}>
       <Button
@@ -30,7 +33,11 @@ export default function App() {
         color="#5e0acc"
         onPress={startAddGoalHandler}
       />
-      <GoalInput onAddGoal={addGoalHandler} visible={isModalVisible} />
+      <GoalInput
+        onAddGoal={addGoalHandler}
+        visible={isModalVisible}
+        closeModal={closeModalHandler}
+      />
       <View style={styles.goalsContainer}>
         <FlatList
           data={courseGoals}
