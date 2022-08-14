@@ -79,9 +79,12 @@ const styles = StyleSheet.create({
   textInput: {
     borderWidth: 1,
     borderColor: "#e4d0ff",
+    backgroundColor: "#e4d0ff",
+    borderRadius: 6,
     width: "100%",
-    padding: 8,
+    padding: 10,
     marginBottom: 10,
+    color: "#120438",
   },
   image: {
     width: 100,
